@@ -1,0 +1,40 @@
+.clients-list {
+  display: flex;
+
+  & li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+
+  & a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    transition: border var(--time) var(--time-cubic);
+    &:hover,
+    &:focus {
+      border: 1px solid var(--blue);
+    }
+    &:hover .clients-icon,
+    &:focus .clients-icon {
+      fill: var(--blue);
+    }
+  }
+  & svg {
+    height: 60px;
+    width: 106px;
+    fill: var(--clients-icon);
+  }
+}
+.clients-icon {
+  transition: fill var(--time) var(--time-cubic);
+}

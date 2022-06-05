@@ -1,0 +1,77 @@
+.team {
+  background-color: #f5f4fa;
+  padding-bottom: 94px;
+  & ul {
+    display: flex;
+  }
+  &-icon {
+    transition: fill var(--time) var(--time-cubic);
+  }
+}
+.team-block {
+  background-color: var(--white);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  /* border-radius: 0px 0px 4px 4px; */
+  list-style: none;
+  margin-right: 30px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.team-text {
+  padding: 30px 0;
+  text-align: center;
+
+  & h3 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 10px;
+  }
+  & p {
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    color: var(--texr-p);
+  }
+}
+.team-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+
+  & li {
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  & a {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color var(--time) var(--time-cubic);
+  }
+
+  & svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--clients-icon);
+  }
+  & a:hover,
+  & a:focus {
+    background-color: var(--blue);
+  }
+  & a:hover .team-icon,
+  & a:focus .team-icon {
+    fill: var(--white);
+  }
+}

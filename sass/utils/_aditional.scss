@@ -1,0 +1,88 @@
+body {
+  font-family: "Raleway", sans-serif;
+  font-family: "Roboto", sans-serif;
+  color: var(--text-color);
+  background-color: var(--white);
+  letter-spacing: 0.03em;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  /* outline: 1px solid tomato; */
+}
+.section {
+  padding-top: 94px;
+  /* outline: 1px solid green; */
+}
+.section:last-child {
+  padding-bottom: 94px;
+}
+svg {
+  fill: currentColor;
+}
+img {
+  display: block;
+}
+h1 {
+  padding: 0;
+  margin: 0;
+  font-weight: 900;
+  color: var(--white);
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 44px;
+  line-height: 1.36;
+}
+h2 {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  color: var(--text-color);
+}
+h3 {
+  padding: 0;
+  margin: 0;
+}
+p,
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+button {
+  cursor: pointer;
+  border: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.active {
+  color: var(--blue);
+  &.nav__item::after {
+    width: 100%;
+  }
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}

@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
-    <title>Any Title</title>
+    <title>WebStudio</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
@@ -10,7 +10,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
@@ -24,20 +25,22 @@
           <a href="./index.html" aria-label="Логотип WebStudio" class="logo-web"
             ><span class="web">Web</span>Studio</a
           >
-          <ul class="nav-list">
+          <ul class="nav">
             <!--Begin nav-list-->
-            <li><a href="./index.html" class="nav-item">Студия</a></li>
             <li>
-              <a href="./portfolio.html" class="nav-item active">Портфолио</a>
+              <a href="./index.html" class="nav__item">Студия</a>
             </li>
-            <li><a href="" class="nav-item">Контакты</a></li>
+            <li>
+              <a href="./portfolio.html" class="nav__item active">Портфолио</a>
+            </li>
+            <li><a href="" class="nav__item">Контакты</a></li>
             <!--End nav-list-->
           </ul>
         </nav>
-        <ul class="kontakt-list">
+        <ul class="kontakt-nav">
           <li>
             <a href="mailto:info@devstudio.com">
-              <svg class="mail" width="16" height="10">
+              <svg class="kontakt-nav__mail" width="16" height="10">
                 <use href="./images/svg/symbol-defs.svg#icon-mail"></use>
               </svg>
               info@devstudio.com</a
@@ -45,7 +48,7 @@
           </li>
           <li>
             <a href="tel:+380961111111">
-              <svg class="tel" width="10" height="16">
+              <svg class="kontakt-nav__tel" width="10" height="16">
                 <use href="./images/svg/symbol-defs.svg#icon-tel"></use>
               </svg>
               +38 096 111 11 11
@@ -70,16 +73,14 @@
           <ul class="portfolio-img">
             <li class="">
               <a href="./" class="portfolio-link">
-                <!--Begin overley-box-->
-                <!--Begin -->
-                <div class="overlay-box">
+                <div class="overlay">
                   <img
                     width="370"
                     alt="Технокряк"
                     src="./images/portfolio_page_img/img.jpg"
                   />
                   <!--Begin overlay-->
-                  <div class="overlay">
+                  <div class="overlay-box">
                     <p class="overlay-text">
                       Ресурс предлагает комплексные предложения с разным уровнем
                       функционала и сервисов. Все это позволит посетителю
@@ -103,14 +104,14 @@
             </li>
             <li>
               <a href="./" class="portfolio-link">
-                <div class="overlay-box">
+                <div class="overlay">
                   <img
                     width="370"
                     alt="Постер"
                     src="./images/portfolio_page_img/img(1).jpg"
                   />
                   <!--Begin overlay-->
-                  <div class="overlay">
+                  <div class="overlay-box">
                     <p class="overlay-text">
                       Ресурс предлагает комплексные предложения с разным уровнем
                       функционала и сервисов. Все это позволит посетителю
@@ -130,14 +131,14 @@
             </li>
             <li>
               <a href="" class="portfolio-link">
-                <div class="overlay-box">
+                <div class="overlay">
                   <img
                     width="370"
                     alt="Ресторан Seafood"
                     src="./images/portfolio_page_img/img(2).jpg"
                   />
                   <!--Begin overlay-->
-                  <div class="overlay">
+                  <div class="overlay-box">
                     <p class="overlay-text">
                       Ресурс предлагает комплексные предложения с разным уровнем
                       функционала и сервисов. Все это позволит посетителю
@@ -157,14 +158,14 @@
             </li>
             <li>
               <a href="" class="portfolio-link">
-                <div class="overlay-box">
+                <div class="overlay">
                   <img
                     width="370"
                     alt="Проект Prime"
                     src="./images/portfolio_page_img/img(3).jpg"
                   />
                   <!--Begin overlay-->
-                  <div class="overlay">
+                  <div class="overlay-box">
                     <p class="overlay-text">
                       Ресурс предлагает комплексные предложения с разным уровнем
                       функционала и сервисов. Все это позволит посетителю
@@ -184,14 +185,14 @@
             </li>
             <li>
               <a href="" class="portfolio-link">
-                <div class="overlay-box">
+                <div class="overlay">
                   <img
                     width="370"
                     alt="Проект Boxes"
                     src="./images/portfolio_page_img/img(4).jpg"
                   />
                   <!--Begin overlay-->
-                  <div class="overlay">
+                  <div class="overlay-box">
                     <p class="overlay-text">
                       Ресурс предлагает комплексные предложения с разным уровнем
                       функционала и сервисов. Все это позволит посетителю
@@ -211,14 +212,14 @@
             </li>
             <li>
               <a href="" class="portfolio-link">
-                <div class="overlay-box">
+                <div class="overlay">
                   <img
                     width="370"
                     alt="Inspiration has no Borders"
                     src="./images/portfolio_page_img/img(5).jpg"
                   />
                   <!--Begin overlay-->
-                  <div class="overlay">
+                  <div class="overlay-box">
                     <p class="overlay-text">
                       Ресурс предлагает комплексные предложения с разным уровнем
                       функционала и сервисов. Все это позволит посетителю
@@ -238,14 +239,14 @@
             </li>
             <li>
               <a href="" class="portfolio-link">
-                <div class="overlay-box">
+                <div class="overlay">
                   <img
                     width="370"
                     alt="Веб-сайт"
                     src="./images/portfolio_page_img/img(6).jpg"
                   />
                   <!--Begin overlay-->
-                  <div class="overlay">
+                  <div class="overlay-box">
                     <p class="overlay-text">
                       Ресурс предлагает комплексные предложения с разным уровнем
                       функционала и сервисов. Все это позволит посетителю
@@ -265,14 +266,14 @@
             </li>
             <li>
               <a href="" class="portfolio-link">
-                <div class="overlay-box">
+                <div class="overlay">
                   <img
                     width="370"
                     alt="Проект LAB"
                     src="./images/portfolio_page_img/img(7).jpg"
                   />
                   <!--Begin overlay-->
-                  <div class="overlay">
+                  <div class="overlay-box">
                     <p class="overlay-text">
                       Ресурс предлагает комплексные предложения с разным уровнем
                       функционала и сервисов. Все это позволит посетителю
@@ -292,14 +293,14 @@
             </li>
             <li>
               <a href="" class="portfolio-link">
-                <div class="overlay-box">
+                <div class="overlay">
                   <img
                     width="370"
                     alt="Growing Business"
                     src="./images/portfolio_page_img/img(8).jpg"
                   />
                   <!--Begin overlay-->
-                  <div class="overlay">
+                  <div class="overlay-box">
                     <p class="overlay-text">
                       Ресурс предлагает комплексные предложения с разным уровнем
                       функционала и сервисов. Все это позволит посетителю
@@ -379,14 +380,12 @@
         <div class="subscribe">
           <h3>Подпишитесь на рассылку</h3>
           <form class="subscribe-form">
-            <label class="">
-              <input
-                class="subscribe-input"
-                type="email"
-                name="email"
-                placeholder="E-mail"
-              />
-            </label>
+            <input
+              class="subscribe-input"
+              type="email"
+              name="email"
+              placeholder="E-mail"
+            />
             <button class="subscribe-btn" type="submit">
               Подписаться
               <svg class="subscribe-icon">

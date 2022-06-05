@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
-    <title>HTML5 це просто!</title>
+    <title>WebStudio</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
@@ -10,7 +10,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.css" />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
@@ -25,18 +26,22 @@
           <a href="./index.html" aria-label="Логотип WebStudio" class="logo-web"
             ><span class="web">Web</span>Studio</a
           >
-          <ul class="nav-list">
+          <ul class="nav">
             <!--Begin nav-list-->
-            <li><a href="./index.html" class="nav-item active">Студия</a></li>
-            <li><a href="./portfolio.html" class="nav-item">Портфолио</a></li>
-            <li><a href="" class="nav-item">Контакты</a></li>
+            <li>
+              <a href="./index.html" class="nav__item active">Студия</a>
+            </li>
+            <li>
+              <a href="./portfolio.html" class="nav__item">Портфолио</a>
+            </li>
+            <li><a href="" class="nav__item">Контакты</a></li>
             <!--End nav-list-->
           </ul>
         </nav>
-        <ul class="kontakt-list">
+        <ul class="kontakt-nav">
           <li>
             <a href="mailto:info@devstudio.com">
-              <svg class="mail" width="16" height="10">
+              <svg class="kontakt-nav__mail" width="16" height="10">
                 <use href="./images/svg/symbol-defs.svg#icon-mail"></use>
               </svg>
               info@devstudio.com</a
@@ -44,7 +49,7 @@
           </li>
           <li>
             <a href="tel:+380961111111">
-              <svg class="tel" width="10" height="16">
+              <svg class="kontakt-nav__tel" width="10" height="16">
                 <use href="./images/svg/symbol-defs.svg#icon-tel"></use>
               </svg>
               +38 096 111 11 11
@@ -64,18 +69,18 @@
           </button>
         </div>
         <!--Begin backdrop-->
-        <div class="backdrop is-hidden" data-modal>
+        <div class="modal is-hidden" data-modal>
           <!--Begin modal-wrapper-->
           <div class="modal-wrapper">
             <button type="button" class="modal-btn" data-modal-close>
-              <svg class="modal-btn-icon" width="11" height="11">
+              <svg class="modal-btn__icon" width="11" height="11">
                 <use
                   href="./images/modal_svg/symbol-defs_min.svg#icon-close"
                 ></use>
               </svg>
             </button>
             <!--Begin label-block-->
-            <div class="label-block">
+            <div class="modal-block">
               <h3 class="modal-title">
                 Оставьте свои данные, мы вам перезвоним
               </h3>
@@ -83,68 +88,65 @@
               <div class="modal-label">
                 <!--Begin form-field-->
 
-                <label class="form-label" for="modal-name">
-                  <span class="form-title">Имя</span>
+                <label class="modal-form">
+                  <span class="modal-form__title">Имя</span>
 
                   <input
-                    id="modal-name"
-                    class="modal-input"
+                    class="modal-form__input"
                     type="text"
                     name="name"
                     placeholder=" "
                   />
-                  <svg class="modal-icon">
+                  <svg class="modal-form__icon">
                     <use
                       href="./images/modal_svg/symbol-defs_min.svg#icon-name"
                     ></use>
                   </svg>
                 </label>
 
-                <label class="form-label" for="modal-tel">
-                  <span class="form-title">Телефон</span>
-                  <svg class="modal-icon">
+                <label class="modal-form" for="modal-tel">
+                  <span class="modal-form__title">Телефон</span>
+                  <svg class="modal-form__icon">
                     <use
                       href="./images/modal_svg/symbol-defs_min.svg#icon-tel"
                     ></use>
                   </svg>
                   <input
                     id="modal-tel"
-                    class="modal-input"
+                    class="modal-form__input"
                     type="tel"
                     name="tel"
                     placeholder=" "
                   />
                 </label>
 
-                <label class="form-label" for="modal-mail">
-                  <span class="form-title">Почта</span>
-                  <svg class="modal-icon">
+                <label class="modal-form">
+                  <span class="modal-form__title">Почта</span>
+                  <svg class="modal-form__icon">
                     <use
                       href="./images/modal_svg/symbol-defs_min.svg#icon-email"
                     ></use>
                   </svg>
                   <input
-                    id="modal-mail"
-                    class="modal-input"
+                    class="modal-form__input"
                     type="email"
                     name="mail"
                     placeholder=" "
                   />
                 </label>
 
-                <label class="form-label"
-                  ><span class="form-title">Комментарий</span>
+                <label class="modal-form"
+                  ><span class="modal-form__title">Комментарий</span>
                   <textarea
-                    class="modal-textarea"
+                    class="modal-form__textarea"
                     placeholder="Введите текст"
                   ></textarea>
                 </label>
-                <label class="form-label label-checkbox" for="modal-checkbox">
+                <label class="modal-form label-checkbox">
                   <input
-                    class="form-checkbox visually-hidden"
+                    class="modal-form__checkbox visually-hidden"
                     type="checkbox"
                     name="checkbox"
-                    id="modal-checkbox"
                   />
                   <span class="custom-checkbox">
                     <svg class="icon-checkbox">
@@ -161,7 +163,7 @@
                     ></span
                   >
                 </label>
-                <button type="submit" class="form-btn">Отправить</button>
+                <button type="submit" class="modal-form__btn">Отправить</button>
               </div>
               <!--End label-block-->
             </div>
@@ -176,8 +178,8 @@
         <!--Begin container-->
         <div class="container">
           <h2 class="visually-hidden">Качества фирмы</h2>
-          <ul>
-            <li>
+          <ul class="quality-list">
+            <li class="quality-item">
               <div class="quality-block">
                 <svg class="quality-icon">
                   <use href="./images/svg/symbol-defs.svg#icon-ant"></use>
@@ -189,7 +191,7 @@
                 формированию позиции.
               </p>
             </li>
-            <li>
+            <li class="quality-item">
               <div class="quality-block">
                 <svg class="quality-icon">
                   <use href="./images/svg/symbol-defs.svg#icon-clock"></use>
@@ -201,7 +203,7 @@
                 кадров влечет за собой.
               </p>
             </li>
-            <li>
+            <li class="quality-item">
               <div class="quality-block">
                 <svg class="quality-icon">
                   <use href="./images/svg/symbol-defs.svg#icon-diag"></use>
@@ -213,7 +215,7 @@
                 степени обуславливает.
               </p>
             </li>
-            <li>
+            <li class="quality-item">
               <div class="quality-block">
                 <svg class="quality-icon">
                   <use href="./images/svg/symbol-defs.svg#icon-astro"></use>
@@ -229,7 +231,7 @@
         </div>
         <!--End container-->
       </section>
-      <section class="section work">
+      <section class="work section">
         <!--Begin container-->
         <div class="container">
           <h2>Чем мы занимаемся</h2>
@@ -550,28 +552,28 @@
           <ul class="links">
             <li>
               <a href="">
-                <svg class="team-icon">
+                <svg class="links-icon">
                   <use href="./images/svg/symbol-defs.svg#icon-inst"></use>
                 </svg>
               </a>
             </li>
             <li>
               <a href="">
-                <svg class="team-icon">
+                <svg class="links-icon">
                   <use href="./images/svg/symbol-defs.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
             <li>
               <a href="">
-                <svg class="team-icon">
+                <svg class="links-icon">
                   <use href="./images/svg/symbol-defs.svg#icon-face"></use>
                 </svg>
               </a>
             </li>
             <li>
               <a href="">
-                <svg class="team-icon">
+                <svg class="links-icon">
                   <use href="./images/svg/symbol-defs.svg#icon-link"></use>
                 </svg>
               </a>
@@ -582,14 +584,12 @@
         <div class="subscribe">
           <h3>Подпишитесь на рассылку</h3>
           <form class="subscribe-form">
-            <label class="">
-              <input
-                class="subscribe-input"
-                type="email"
-                name="email"
-                placeholder="E-mail"
-              />
-            </label>
+            <input
+              class="subscribe-input"
+              type="email"
+              name="email"
+              placeholder="E-mail"
+            />
             <button class="subscribe-btn" type="submit">
               Подписаться
               <svg class="subscribe-icon">

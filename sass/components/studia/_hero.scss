@@ -1,0 +1,295 @@
+.hero {
+  max-width: 1600px;
+  flex-direction: column;
+  align-items: center;
+
+  color: var(--white);
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/main_page/hero.jpg");
+  background-position: center;
+
+  margin: 0 auto;
+  & h1 {
+    max-width: 696px;
+    margin: 0 auto 30px auto;
+  }
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero-btn {
+  border: none;
+  padding: 10px 32px;
+  justify-content: center;
+  font-family: "Roboto";
+  background-color: var(--blue);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--white);
+  transition: background-color var(--time) var(--time-cubic);
+  &:hover {
+    background-color: #188ce8;
+  }
+}
+
+/* modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  transition: visibility var(--time) var(--time-cubic),
+    opacity var(--time) var(--time-cubic);
+  &-wrapper {
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 528px;
+    height: 581px;
+    color: var(--text-color);
+    background-color: var(--white);
+    border-radius: 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    animation-name: visible-modal;
+    animation-duration: 1000ms;
+    animation-timing-function: linear;
+  }
+  &-title {
+    font-family: "Roboto";
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 12px;
+  }
+  &-label {
+    display: flex;
+    flex-direction: column;
+    & textarea {
+      resize: none;
+      width: 100%;
+      height: 120px;
+      margin-top: 4px;
+    }
+  }
+}
+
+@keyframes visible-modal {
+  0% {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: scale(0.5), translate(-50%, -50%);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1), translate(-50%, -50%);
+  }
+}
+.modal-btn {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 8px;
+  right: 8px;
+  border-radius: 50%;
+  fill: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  &__icon {
+    transition: fill var(--time) var(--time-cubic);
+  }
+  &:hover .modal-btn__icon {
+    fill: var(--blue);
+  }
+}
+
+.modal-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  &__title {
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: var(--texr-p);
+    transition: color var(--time) var(--time-cubic);
+  }
+  &__input {
+    margin-top: 4px;
+    height: 40px;
+    width: 100%;
+    margin-bottom: 10px;
+    padding-left: 42px;
+    border: 1px solid var(--modal-border-color);
+    outline: transparent;
+    border-radius: 4px;
+    transition: border-color var(--time) var(--time-cubic),
+      color var(--time) var(--time-cubic);
+  }
+  &__icon {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: 15px;
+    top: 42%;
+    transition: fill var(--time) var(--time-cubic);
+  }
+  &__textarea {
+    border: 1px solid var(--modal-border-color);
+    outline: transparent;
+    border-radius: 4px;
+    padding: 12px 16px;
+    transition: border-color var(--time) var(--time-cubic),
+      color var(--time) var(--time-cubic);
+    &::placeholder {
+      font-family: "Roboto";
+
+      font-size: 14px;
+      line-height: 1.14;
+      letter-spacing: 0.01em;
+
+      color: rgba(117, 117, 117, 0.5);
+    }
+  }
+  &:focus-within .modal-form__icon {
+    fill: var(--blue);
+  }
+  &:focus-within .modal-form__input,
+  &:focus-within .modal-form__textarea {
+    border-color: var(--blue);
+    color: var(--blue);
+  }
+  &:focus-within .modal-form__title {
+    color: var(--blue);
+  }
+  &__checkbox:checked + .custom-checkbox {
+    background-color: var(--blue);
+    outline: none;
+  }
+  &__checkbox:checked + .custom-checkbox .icon-checkbox {
+    opacity: 1;
+    fill: var(--white);
+  }
+}
+
+.modal-form__btn {
+  background: var(--blue);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.06em;
+  width: 200px;
+  height: 50px;
+  margin: 0 auto;
+  color: var(--white);
+  transition: border-color var(--time) var(--time-cubic);
+  &:hover,
+  &:focus {
+    background-color: rgba(24, 140, 232, 1);
+  }
+}
+
+.label-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  flex-direction: row;
+}
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+  border-radius: 2px;
+  outline: 1px solid var(--text-color);
+  transition: border-color var(--time) var(--time-cubic),
+    outline var(--time) var(--time-cubic);
+}
+.checkbox-text {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--texr-p);
+}
+.checkbox-link {
+  color: var(--blue);
+  text-decoration: underline;
+  cursor: pointer;
+}
+.icon-checkbox {
+  opacity: 0;
+  transition: opacity var(--time) var(--time-cubic),
+    fill var(--time) var(--time-cubic);
+}
+
+/* .modal-btn {
+  display: flex;
+  align-items: center;
+  margin: 8px;
+  margin-bottom: 0px;
+  border-radius: 50%;
+  padding: 10px;
+  border: none;
+  justify-content: center;
+  background-color: var(--blue);
+  background-image: url("./images/modal_svg/x-white.svg");
+  background-position: center;
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  color: var(--white);
+  transition: border var(--time) var(--time-cubic),
+    background-color var(--time) var(--time-cubic),
+    color var(--time) var(--time-cubic), transform var(--time) var(--time-cubic);
+} */
+/* .modal-btn:hover {
+  border: 2px solid var(--blue);
+  background-color: white;
+  color: var(--blue);
+  transform: rotate(360deg);
+  background-image: url("./images/modal_svg/x-black.svg");
+} */
+/* .label-block {
+  margin: 40px;
+  margin-top: 2px;
+} */

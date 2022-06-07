@@ -29,7 +29,7 @@
   border: none;
   padding: 10px 32px;
   justify-content: center;
-  font-family: "Roboto";
+  font-family: var(--font-roboto);
   background-color: var(--blue);
   font-weight: 700;
   font-size: 16px;
@@ -72,7 +72,7 @@
     animation-timing-function: linear;
   }
   &-title {
-    font-family: "Roboto";
+    font-family: var(--font-roboto);
     font-weight: 700;
     font-size: 20px;
     line-height: 1.15;
@@ -170,7 +170,7 @@
     transition: border-color var(--time) var(--time-cubic),
       color var(--time) var(--time-cubic);
     &::placeholder {
-      font-family: "Roboto";
+      font-family: var(--font-roboto);
 
       font-size: 14px;
       line-height: 1.14;

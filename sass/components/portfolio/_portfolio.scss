@@ -1,9 +1,9 @@
 .portfolio {
-  font-family: "Roboto";
+  font-family: var(--font-roboto);
 
   & button {
     background-color: var(--portfolio-button);
-    font-family: "Roboto";
+    font-family: var(--font-roboto);
     border-radius: 4px;
     color: var(--text-color);
     font-weight: 500;
@@ -119,7 +119,7 @@
     /* transform: translateY 2500ms var(--time-cubic); */
   }
   &-text {
-    font-family: "Roboto";
+    font-family: var(--font-roboto);
     font-size: 18px;
     line-height: 28px;
     color: white;

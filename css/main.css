@@ -14,11 +14,13 @@
   --time-cubic: cubic-bezier(0.4, 0, 0.2, 1);
   --time: 250ms;
   --modal-border-color: rgba(33, 33, 33, 0.2);
+  --font-railway: "Raleway", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
 }
 
 body {
-  font-family: "Raleway", sans-serif;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-railway);
+  font-family: var(--font-roboto);
   color: var(--text-color);
   background-color: var(--white);
   letter-spacing: 0.03em;
@@ -296,7 +298,7 @@ nav a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-family: "Roboto";
+  font-family: var(--font-roboto);
   background-color: var(--blue);
   font-weight: 700;
   font-size: 16px;
@@ -348,7 +350,7 @@ nav a {
 }
 
 .modal-title {
-  font-family: "Roboto";
+  font-family: var(--font-roboto);
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -496,7 +498,7 @@ nav a {
 }
 
 .modal-form__textarea::-webkit-input-placeholder {
-  font-family: "Roboto";
+  font-family: var(--font-roboto);
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.01em;
@@ -504,7 +506,7 @@ nav a {
 }
 
 .modal-form__textarea:-ms-input-placeholder {
-  font-family: "Roboto";
+  font-family: var(--font-roboto);
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.01em;
@@ -512,7 +514,7 @@ nav a {
 }
 
 .modal-form__textarea::-ms-input-placeholder {
-  font-family: "Roboto";
+  font-family: var(--font-roboto);
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.01em;
@@ -520,7 +522,7 @@ nav a {
 }
 
 .modal-form__textarea::placeholder {
-  font-family: "Roboto";
+  font-family: var(--font-roboto);
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.01em;
@@ -968,12 +970,12 @@ nav a {
 }
 
 .portfolio {
-  font-family: "Roboto";
+  font-family: var(--font-roboto);
 }
 
 .portfolio button {
   background-color: var(--portfolio-button);
-  font-family: "Roboto";
+  font-family: var(--font-roboto);
   border-radius: 4px;
   color: var(--text-color);
   font-weight: 500;
@@ -1116,7 +1118,7 @@ nav a {
 }
 
 .overlay-text {
-  font-family: "Roboto";
+  font-family: var(--font-roboto);
   font-size: 18px;
   line-height: 28px;
   color: white;
